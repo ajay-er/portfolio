@@ -114,24 +114,6 @@ for (let i = 0; i < filterBtn.length; i++) {
 }
 
 
-
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
-
-    // check form validation
-   
-
-  });
-}
-
-
-
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -154,12 +136,30 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+
 //form validation
 
-function validate(){
-  var userName=document.getElementById("username");
-  var email=document.getElementById("email");
 
-  if(userName.value==""){
-    alert("Please Enter your name...!")
-  }}
+const Name =document.getElementById('username')
+const email =document.getElementById('Email')
+const form =document.getElementById('subit-form')
+const ButtonD= document.getElementById('btnDis')
+
+
+function validateInput() {
+
+        const NameValue =Name.value.trim();
+        Name.value = NameValue;
+        const emailValue =email.value.trim();
+        let booleanButton = true
+        if(NameValue === '' || emailValue === '' ){
+
+          booleanButton =false;
+          alert("Fill the fields");
+        }
+        
+        return booleanButton;
+        
+};
+
+

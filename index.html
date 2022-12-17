@@ -131,7 +131,7 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="https://www.facebook.com/ajay.ii.169" class="social-link">
+            <a href="https://www.facebook.com/ajay.ii.169" target="_blank"  class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
@@ -143,7 +143,7 @@
           </li>
 
           <li class="social-item">
-            <a href="https://www.instagram.com/mrjustjay/" class="social-link">
+            <a href="https://www.instagram.com/mrjustjay/" target="_blank" class="social-link">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
@@ -193,7 +193,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" id="PageContact" data-nav-link>Contact</button>
           </li>
 
         </ul>
@@ -433,11 +433,8 @@
 
               <div data-modal-text>
                 <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  Fantastic work as always, will continue to utilise their services for all our web development in the future! 
+                    Highly recommend!
                 </p>
               </div>
 
@@ -1057,22 +1054,22 @@
           </figure>
         </section>
 
-        <section class="contact-form">
+        <section class="contact-form" >
 
           <h3 class="h3 form-title">Contact Form</h3>
 
           <form action="#" id="submit-form" class="form" data-form>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" id="username" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" id="ids" class="form-input" placeholder="Email address" required data-form-input>
+            <div class="input-wrapper" >
+              <input type="text" name="fullname" id="username" class="form-input" placeholder="Full name"  data-form-input>
+    
+              <input type="email" name="email" id="Email" class="form-input" placeholder="Email address"  data-form-input>
             </div>
+            <textarea name="message" class="form-input" placeholder="Your Message"  data-form-input></textarea>
 
-            <textarea name="message" class="form-input" id="" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" onclick="validate()" data-form-btn>
+            <button class="form-btn" type="submit" id="btnDis" onclick="return validateInput()"  data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
+              
               <span>Send Message</span>
             </button>
 
@@ -1101,7 +1098,7 @@
             success:function (response){
                 alert("Form submitted successfully")
                 window.location.reload()
-                //window.location.href="https://google.com"
+                window.location.href="#"
             },
             error:function (err){
                 alert("Something Error")
